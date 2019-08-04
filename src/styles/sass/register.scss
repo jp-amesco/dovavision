@@ -1,4 +1,4 @@
-.login-container-grid {
+.register-container-grid{
 	display: grid;
 	height: 100vh;
 	align-content: center;
@@ -16,20 +16,5 @@
 		&:last-child{
 			margin-bottom: 15px;
 		}
-	}
-
-	.subgrid {
-		display: grid;
-		grid-template-columns: 50% 50%; 
-		justify-content: center;
-		grid-column-gap: 10px;
-
-		&--item {
-			margin: 0;
-		}
-	}
-
-	.btn {
-		margin: 0 8px;
 	}
 }

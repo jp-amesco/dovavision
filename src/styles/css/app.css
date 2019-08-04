@@ -6,25 +6,24 @@
   display: grid;
   height: 100vh;
   align-content: center; }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center; }
-
-.item {
-  margin: 10px; }
-  .item:last-child {
-    margin-bottom: 15px; }
-
-.subgrid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  grid-column-gap: 10px; }
-  .subgrid--item {
-    margin: 0; }
+  .login-container-grid .grid-container {
+    display: grid;
+    grid-template-columns: 350px;
+    margin: auto auto;
+    text-align: center; }
+  .login-container-grid .item {
+    margin: 10px; }
+    .login-container-grid .item:last-child {
+      margin-bottom: 15px; }
+  .login-container-grid .subgrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    grid-column-gap: 10px; }
+    .login-container-grid .subgrid--item {
+      margin: 0; }
+  .login-container-grid .btn {
+    margin: 0 8px; }
 
 .input {
   width: 100%;
@@ -46,8 +45,7 @@
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
-  text-decoration: none;
-  margin: 0 8px; }
+  text-decoration: none; }
   .btn--primary {
     background-color: #3d94f6;
     border: 1px solid #3d94f6; }
@@ -58,6 +56,20 @@
     border: 1px solid #02a32d; }
     .btn--success:hover {
       background-color: #007a21; }
+
+.register-container-grid {
+  display: grid;
+  height: 100vh;
+  align-content: center; }
+  .register-container-grid .grid-container {
+    display: grid;
+    grid-template-columns: 350px;
+    margin: auto auto;
+    text-align: center; }
+  .register-container-grid .item {
+    margin: 10px; }
+    .register-container-grid .item:last-child {
+      margin-bottom: 15px; }
 
 #root {
   height: 100vh; }
