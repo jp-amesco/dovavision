@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Panel from '../elements/panel';
 import Input from '../elements/input.js';
 import Button from '../elements/button.js';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { Link } from 'react-router-dom'
 
 class Register extends Component {

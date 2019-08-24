@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Login from './js/pages/Login';
-import Home from './js/pages/Home';
+// import Home from './js/pages/Home';
 import Register from './js/pages/Register';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
