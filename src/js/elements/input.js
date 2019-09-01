@@ -8,8 +8,8 @@ class Input extends Component {
 		const label = <labe className={this.props.labelClass}>{this.props.label}</labe>
 		response.push(label);
 	}
-
-    const input =  <input 
+	const input =  <input 
+		key={this.props.uniqueKey}
     	type={this.props.type} 
     	name={this.props.name} 
     	id={this.props.id} 

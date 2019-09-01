@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Panel from './panel';
+import Routes from './routes';
 import '../styles/css/app.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
       <div className='container'>
         <div className='box'>
         </div>
-         <Panel size='panel-large' btnType='btn-success'/>
+         <Routes />
       </div>
     );
   }
