@@ -13,8 +13,8 @@ class Input extends Component {
     	type={this.props.type} 
     	name={this.props.name} 
     	id={this.props.id} 
-    	className={this.props.class} 
-    	placeholder={this.props.placeholder}
+    	className={this.props.className} 
+		placeholder={this.props.placeholder}
     />; 
 	response.push(input);
 

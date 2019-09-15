@@ -7,22 +7,17 @@ import Authentication from './helpers/Authentication';
 
 /** Função para validar se o usuario tem acesso a rotas privadas  */
 function PrivateRoutes ({ component: Component, ...rest }) {
-    return <Route
-        {...rest}
-        render ={props => {
-            const authentication = new Authentication();
+    const authentication = new Authentication();
+    if (!authentication.isAuthenticated(rest)) {
+        return <Redirect 
+            to={{
+                pathname:'/login',
+                state: rest.location.state
+            }}
+        />
+    }
 
-            if (authentication.isAuthenticated(props)) {
-                return (<Component {...props} />)
-            }
-            return (<Redirect 
-                to={{
-                    pathname:'/login',
-                    state: {from: props.location}
-                }}
-            />)
-        }} 
-    />
+    return <Component {...rest} />
 }
 
 function Routes () {

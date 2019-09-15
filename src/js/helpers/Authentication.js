@@ -10,7 +10,7 @@ class Authentication {
     
     /** Verifica se o usuario está autenticado */
     isAuthenticated (props) {
-        if (!props.location.token) { 
+        if (!props.location.state.token) { 
             return false;
         }
         return true;
