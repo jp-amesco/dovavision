@@ -21,14 +21,14 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    if (this.props.location.state && this.props.location.state) {
+    if (this.props.location.state) {
       this.setState({
         email: this.props.location.state.email,
         password: this.props.location.state.password,
         errorLogin: this.props.location.state.errorLogin
       });
     }
-    const { location, history } = this.props;
+    const { history } = this.props;
     //use the state via location.state
     //and replace the state via
     history.replace()
