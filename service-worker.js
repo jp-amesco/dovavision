@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dovavision/precache-manifest.07637bcca2d887fc218566f618ae8e05.js"
+  "/dovavision/precache-manifest.da3c2ec53021d8425b227ab4a2a955f5.js"
 );
 
 self.addEventListener('message', (event) => {
