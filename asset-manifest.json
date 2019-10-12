@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f4af092.chunk.css",
-    "main.js": "/static/js/main.7dbb6049.chunk.js",
-    "main.js.map": "/static/js/main.7dbb6049.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.ff9ea1f9.chunk.css": "/static/css/2.ff9ea1f9.chunk.css",
-    "static/js/2.0b567009.chunk.js": "/static/js/2.0b567009.chunk.js",
-    "static/js/2.0b567009.chunk.js.map": "/static/js/2.0b567009.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.30bde49c9cb03b3d397cd7cce4b55a9e.js": "/precache-manifest.30bde49c9cb03b3d397cd7cce4b55a9e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.ff9ea1f9.chunk.css.map": "/static/css/2.ff9ea1f9.chunk.css.map",
-    "static/css/main.0f4af092.chunk.css.map": "/static/css/main.0f4af092.chunk.css.map",
-    "static/media/app.css": "/static/media/new-york-1.d6cfc46a.jpg"
+    "main.css": "/dovavision/static/css/main.9fdca8b7.chunk.css",
+    "main.js": "/dovavision/static/js/main.8386506b.chunk.js",
+    "main.js.map": "/dovavision/static/js/main.8386506b.chunk.js.map",
+    "runtime~main.js": "/dovavision/static/js/runtime~main.2e84e063.js",
+    "runtime~main.js.map": "/dovavision/static/js/runtime~main.2e84e063.js.map",
+    "static/css/2.ff9ea1f9.chunk.css": "/dovavision/static/css/2.ff9ea1f9.chunk.css",
+    "static/js/2.ae4d6612.chunk.js": "/dovavision/static/js/2.ae4d6612.chunk.js",
+    "static/js/2.ae4d6612.chunk.js.map": "/dovavision/static/js/2.ae4d6612.chunk.js.map",
+    "index.html": "/dovavision/index.html",
+    "precache-manifest.07637bcca2d887fc218566f618ae8e05.js": "/dovavision/precache-manifest.07637bcca2d887fc218566f618ae8e05.js",
+    "service-worker.js": "/dovavision/service-worker.js",
+    "static/css/2.ff9ea1f9.chunk.css.map": "/dovavision/static/css/2.ff9ea1f9.chunk.css.map",
+    "static/css/main.9fdca8b7.chunk.css.map": "/dovavision/static/css/main.9fdca8b7.chunk.css.map",
+    "static/media/app.css": "/dovavision/static/media/new-york-1.d6cfc46a.jpg"
   }
 }
