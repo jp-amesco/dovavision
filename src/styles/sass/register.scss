@@ -2,12 +2,18 @@
 	display: grid;
 	height: 100vh;
 	align-content: center;
+	background-image: url('../../images/new-york-1.jpg');
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment: fixed;
+	background-size: cover; 
 
 	.grid-container {
 		display: grid;
 		grid-template-columns: 350px;
 		margin: auto auto;
 		text-align: center;
+		background-color: rgba($color: #000, $alpha: 0.4);
 	}
 
 	.item {
@@ -16,5 +22,13 @@
 		&:last-child{
 			margin-bottom: 15px;
 		}
+	}
+
+	.title {
+		color: #fff;
+	}
+	
+	.react-datepicker-wrapper {
+		width: 100%;
 	}
 }
