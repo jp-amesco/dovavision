@@ -2,9 +2,11 @@
   "name": "dovavision",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jp-amesco.github.io/dovavision",
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.1.0",
+    "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
@@ -27,7 +29,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar ./src/styles/sass/* -o  ./src/styles/css/",
-    "sass": "node-sass-chokidar ./src/styles/sass/* -o ./src/styles/css/ --watch"
+    "sass": "node-sass-chokidar ./src/styles/sass/* -o ./src/styles/css/ --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

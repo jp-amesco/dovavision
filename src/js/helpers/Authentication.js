@@ -25,7 +25,7 @@ class Authentication {
             username: email,
             password: password
         }  
-        return await axios.post(this.url + '/o/token/', data)
+        return await axios.post(this.url + 'o/token/', data)
             .then(res => {
                 return res;
             }).catch(error => {
