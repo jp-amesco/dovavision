@@ -23,6 +23,9 @@ function PrivateRoutes ({ component: Component, ...rest }) {
 function Routes () {
     return <BrowserRouter>
         <Switch>
+            <Route path="/" exact={true}>
+                <Redirect to='/login'/>
+            </Route>
             <Route path="/login" exact={true} component={Login} />
             <Route path="/register" exact={true} component={Register} />
             <PrivateRoutes path="/home" exact={true} component={Home} />
