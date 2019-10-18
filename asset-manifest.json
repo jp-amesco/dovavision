@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dovavision/login/static/css/main.0949cbab.chunk.css",
-    "main.js": "/dovavision/login/static/js/main.892ca556.chunk.js",
-    "main.js.map": "/dovavision/login/static/js/main.892ca556.chunk.js.map",
-    "runtime~main.js": "/dovavision/login/static/js/runtime~main.fd42003e.js",
-    "runtime~main.js.map": "/dovavision/login/static/js/runtime~main.fd42003e.js.map",
-    "static/css/2.ff9ea1f9.chunk.css": "/dovavision/login/static/css/2.ff9ea1f9.chunk.css",
-    "static/js/2.a66e0475.chunk.js": "/dovavision/login/static/js/2.a66e0475.chunk.js",
-    "static/js/2.a66e0475.chunk.js.map": "/dovavision/login/static/js/2.a66e0475.chunk.js.map",
-    "index.html": "/dovavision/login/index.html",
-    "precache-manifest.f8d2935b60079af70ff649f878a724cd.js": "/dovavision/login/precache-manifest.f8d2935b60079af70ff649f878a724cd.js",
-    "service-worker.js": "/dovavision/login/service-worker.js",
-    "static/css/2.ff9ea1f9.chunk.css.map": "/dovavision/login/static/css/2.ff9ea1f9.chunk.css.map",
-    "static/css/main.0949cbab.chunk.css.map": "/dovavision/login/static/css/main.0949cbab.chunk.css.map",
-    "static/media/app.css": "/dovavision/login/static/media/new-york-1.d6cfc46a.jpg"
+    "main.css": "./static/css/main.9d33f91b.chunk.css",
+    "main.js": "./static/js/main.3663903c.chunk.js",
+    "main.js.map": "./static/js/main.3663903c.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
+    "static/css/2.ff9ea1f9.chunk.css": "./static/css/2.ff9ea1f9.chunk.css",
+    "static/js/2.0f78bcb7.chunk.js": "./static/js/2.0f78bcb7.chunk.js",
+    "static/js/2.0f78bcb7.chunk.js.map": "./static/js/2.0f78bcb7.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.8d64696c85c2aa52afdd7d5955294403.js": "./precache-manifest.8d64696c85c2aa52afdd7d5955294403.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.ff9ea1f9.chunk.css.map": "./static/css/2.ff9ea1f9.chunk.css.map",
+    "static/css/main.9d33f91b.chunk.css.map": "./static/css/main.9d33f91b.chunk.css.map",
+    "static/media/app.css": "./static/media/new-york-1.d6cfc46a.jpg"
   }
 }
