@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass-chokidar ./src/styles/sass/* -o  ./src/styles/css/",
-    "sass": "node-sass-chokidar ./src/styles/sass/* -o ./src/styles/css/ --watch",
+    "sass": "node-sass-chokidar ./src/styles/sass/* -o ./src/styles/css/ --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
