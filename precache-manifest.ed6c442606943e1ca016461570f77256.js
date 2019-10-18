@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ee95fc1725aeeade82f4bc804f76b61",
+    "revision": "e8fb2f1781ee99a37c961a22e882c92e",
     "url": "/dovavision/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dovavision/static/css/2.ff9ea1f9.chunk.css"
   },
   {
-    "revision": "55e2b17f44a2d9df04e8",
-    "url": "/dovavision/static/css/main.9fdca8b7.chunk.css"
+    "revision": "5712dbd0aa25715d2676",
+    "url": "/dovavision/static/css/main.5b24d775.chunk.css"
   },
   {
     "revision": "7c68b98138dc4847ee3c",
     "url": "/dovavision/static/js/2.4ac1bf4d.chunk.js"
   },
   {
-    "revision": "55e2b17f44a2d9df04e8",
+    "revision": "5712dbd0aa25715d2676",
     "url": "/dovavision/static/js/main.2fa67795.chunk.js"
   },
   {
