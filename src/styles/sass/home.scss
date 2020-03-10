@@ -1,0 +1,78 @@
+.home-container-grid {
+    display:  grid;
+    grid-template-columns: 3.5% 96.5%;
+
+    .content {
+        display: grid;
+        grid-template-rows: 50vh 50vh;
+
+        .row {
+            display: grid;
+
+            &-2{
+                grid-template-columns: 65% 35%;
+            }
+
+            &-3 {
+                grid-template-columns: 25% 25% 50%;
+            }
+            
+            .col {
+                display: grid;
+                padding: 15px;
+
+                &-2 {
+                    grid-template-rows: 50% 50%;
+                }
+            }
+
+        }
+        .panel {
+            &-graph {
+                height: 400px;
+            }
+            
+            @media screen and (max-width: 1400px) {
+                &-graph {
+                    height: 275px;
+                }
+            }
+            
+            &-stock-name {
+                margin-bottom: 10px;
+                display: grid;
+                grid-template-rows: 60% 20% 20%;
+                padding: 15px;
+                
+                .company-name {
+                    text-align: center;
+                    font-size: 2.5vh;    
+                    align-self: center;
+                    color: #fff;   
+                }
+
+                .row {
+                    display: grid;
+                }
+
+                .chart-options {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                }
+            }
+
+            &-future {
+                margin-top: 10px;
+            }
+
+            &-teste-1 {
+            }
+
+            &-teste-2 {
+            }
+
+            &-teste-3 {
+            }
+        }
+    }
+}

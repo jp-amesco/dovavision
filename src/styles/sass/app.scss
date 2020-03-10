@@ -4,10 +4,14 @@
 @import 'button';
 @import 'register';
 @import 'message';
+@import 'navbar';
+@import 'home';
+@import 'select';
 
 body {
 	margin: 0;
-	font-family: Arial, Helvetica, sans-serif
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(40, 40, 40);
 }
 
 #root {

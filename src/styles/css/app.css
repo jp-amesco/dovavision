@@ -1,193 +1,27 @@
 .panel {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px; }
+  box-shadow: 0 4px 20px 0 black;
+  border-radius: 5px;
+  background-color: #323232; }
 
 .login-container-grid {
   display: grid;
   height: 100vh;
   align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
+  background-image: url("../../images/new-york-1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover; }
   .login-container-grid .grid-container {
     display: grid;
-    grid-template-columns: 350px;
+    grid-template-columns: 250px;
     margin: auto auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: rgba(0, 0, 0, 0.7); }
   .login-container-grid .item {
     margin: 10px; }
-    .login-container-grid .item:last-child {
-      margin-bottom: 15px; }
   .login-container-grid .title {
     color: #fff; }
-  .login-container-grid .subgrid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-    grid-column-gap: 10px; }
-    .login-container-grid .subgrid--item {
-      margin: 0; }
-  .login-container-grid .btn {
-    margin: 0 8px; }
-
-.input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: center; }
-
-.panel {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px; }
-
-.login-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.login-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.login-container-grid .item {
-  margin: 10px; }
-
-.login-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.login-container-grid .title {
-  color: #fff; }
-
-.login-container-grid .subgrid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  grid-column-gap: 10px; }
-
-.login-container-grid .subgrid--item {
-  margin: 0; }
-
-.login-container-grid .btn {
-  margin: 0 8px; }
-
-.input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: center; }
-
-.panel {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px; }
-
-.login-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.login-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.login-container-grid .item {
-  margin: 10px; }
-
-.login-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.login-container-grid .title {
-  color: #fff; }
-
-.login-container-grid .subgrid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  grid-column-gap: 10px; }
-
-.login-container-grid .subgrid--item {
-  margin: 0; }
-
-.login-container-grid .btn {
-  margin: 0 8px; }
-
-.input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: center; }
-
-.panel {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px; }
-
-.login-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.login-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.login-container-grid .item {
-  margin: 10px; }
-
-.login-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.login-container-grid .title {
-  color: #fff; }
-
-.login-container-grid .subgrid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  grid-column-gap: 10px; }
-
-.login-container-grid .subgrid--item {
-  margin: 0; }
-
-.login-container-grid .btn {
-  margin: 0 8px; }
 
 .input {
   width: 100%;
@@ -211,170 +45,22 @@
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none; }
-
-.btn--primary {
-  background-color: #3d94f6;
-  border: 1px solid #3d94f6; }
-
-.btn--primary:hover {
-  background-color: #1e62d0; }
-
-.btn--success {
-  background-color: #02a32d;
-  border: 1px solid #02a32d; }
-
-.btn--success:hover {
-  background-color: #007a21; }
+  .btn--primary {
+    background-color: #3d94f6;
+    border: 1px solid #3d94f6; }
+  .btn--primary:hover {
+    background-color: #1e62d0; }
+  .btn--success {
+    background-color: #02a32d;
+    border: 1px solid #02a32d; }
+  .btn--success:hover {
+    background-color: #007a21; }
 
 .register-container-grid {
   display: grid;
   height: 100vh;
   align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.register-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.register-container-grid .item {
-  margin: 10px; }
-
-.register-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.register-container-grid .title {
-  color: #fff; }
-
-.register-container-grid .react-datepicker-wrapper {
-  width: 100%; }
-
-.message {
-  display: grid;
-  margin: auto auto 5px auto;
-  background-color: #f2dede;
-  width: 350px;
-  text-align: center;
-  height: 45px;
-  border-radius: 5px;
-  color: #b15f5e;
-  border-color: #ebccd1;
-  align-content: center; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
-
-#root {
-  height: 100vh; }
-
-.register-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.register-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.register-container-grid .item {
-  margin: 10px; }
-
-.register-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.register-container-grid .title {
-  color: #fff; }
-
-.register-container-grid .react-datepicker-wrapper {
-  width: 100%; }
-
-.message {
-  display: grid;
-  margin: auto auto 5px auto;
-  background-color: #f2dede;
-  width: 350px;
-  text-align: center;
-  height: 45px;
-  border-radius: 5px;
-  color: #b15f5e;
-  border-color: #ebccd1;
-  align-content: center; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
-
-#root {
-  height: 100vh; }
-
-.register-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
-
-.register-container-grid .grid-container {
-  display: grid;
-  grid-template-columns: 350px;
-  margin: auto auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); }
-
-.register-container-grid .item {
-  margin: 10px; }
-
-.register-container-grid .item:last-child {
-  margin-bottom: 15px; }
-
-.register-container-grid .title {
-  color: #fff; }
-
-.register-container-grid .react-datepicker-wrapper {
-  width: 100%; }
-
-.message {
-  display: grid;
-  margin: auto auto 5px auto;
-  background-color: #f2dede;
-  width: 350px;
-  text-align: center;
-  height: 45px;
-  border-radius: 5px;
-  color: #b15f5e;
-  border-color: #ebccd1;
-  align-content: center; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
-
-#root {
-  height: 100vh; }
-
-.register-container-grid {
-  display: grid;
-  height: 100vh;
-  align-content: center;
-  background-image: url("../../images/new-york-1.jpg");
+  background-image: url("../../images/new-york-1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -406,9 +92,79 @@ body {
   border-color: #ebccd1;
   align-content: center; }
 
+.navbar-closed {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  transition: all .2s linear; }
+
+.navbar--icon {
+  color: white; }
+
+.navbar-opened {
+  background-color: black;
+  height: 100vh;
+  width: 450%;
+  text-align: center;
+  transition: all .2s linear;
+  z-index: 1; }
+  .navbar-opened--icon {
+    color: white; }
+
+.home-container-grid {
+  display: grid;
+  grid-template-columns: 3.5% 96.5%; }
+  .home-container-grid .content {
+    display: grid;
+    grid-template-rows: 50vh 50vh; }
+    .home-container-grid .content .row {
+      display: grid; }
+      .home-container-grid .content .row-2 {
+        grid-template-columns: 65% 35%; }
+      .home-container-grid .content .row-3 {
+        grid-template-columns: 25% 25% 50%; }
+      .home-container-grid .content .row .col {
+        display: grid;
+        padding: 15px; }
+        .home-container-grid .content .row .col-2 {
+          grid-template-rows: 50% 50%; }
+    .home-container-grid .content .panel-graph {
+      height: 400px; }
+    @media screen and (max-width: 1400px) {
+      .home-container-grid .content .panel-graph {
+        height: 275px; } }
+    .home-container-grid .content .panel-stock-name {
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-rows: 60% 20% 20%;
+      padding: 15px; }
+      .home-container-grid .content .panel-stock-name .company-name {
+        text-align: center;
+        font-size: 2.5vh;
+        align-self: center;
+        color: #fff; }
+      .home-container-grid .content .panel-stock-name .row {
+        display: grid; }
+      .home-container-grid .content .panel-stock-name .chart-options {
+        display: grid;
+        grid-template-columns: 50% 50%; }
+    .home-container-grid .content .panel-future {
+      margin-top: 10px; }
+
+.select {
+  font-size: 2vh;
+  margin: 2px;
+  border: 1px solid #bebdbd;
+  border-radius: 5px;
+  background: transparent;
+  text-align-last: center;
+  color: #fff; }
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #282828; }
 
 #root {
   height: 100vh; }

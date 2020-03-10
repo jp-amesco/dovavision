@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import Routes from './routes';
+import { Provider } from 'react-redux';
+import Routes from './routes/Routes';
 import '../styles/css/app.css';
+import store from './store';
 
 class App extends Component {
 
@@ -9,7 +11,9 @@ class App extends Component {
       <div className='container'>
         <div className='box'>
         </div>
-         <Routes />
+          <Provider store={store}>
+            <Routes />
+          </Provider>
       </div>
     );
   }
