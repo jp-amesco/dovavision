@@ -9,8 +9,12 @@
         .row {
             display: grid;
 
-            &-2{
+            &-65 {
                 grid-template-columns: 65% 35%;
+            }
+
+            &-50 {
+                grid-template-columns: 50% 50%;
             }
 
             &-3 {
@@ -24,9 +28,17 @@
                 &-2 {
                     grid-template-rows: 50% 50%;
                 }
-            }
 
+                &-pd-r {
+                    padding: 0 15px 0 0;
+                }
+
+                &-pd-l {
+                    padding: 0 0 0 15px;
+                }
+            }
         }
+
         .panel {
             &-graph {
                 height: 400px;

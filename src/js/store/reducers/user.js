@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
-    accessToken: null,
-    refreshToken: null,
-    isAuthenticated: false,
+    accessToken: localStorage.getItem('accesToken'),
+    refreshToken: localStorage.getItem('refreshToken'),
+    isAuthenticated: localStorage.getItem('accessToken') === null ? false : true,
     user: {}
 }
 

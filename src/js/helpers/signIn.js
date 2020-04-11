@@ -14,7 +14,6 @@ export default async function singIn(email, password) {
     .then(res => {
       return res;
     }).catch(error => {
-      console.log(error.response)
       return {
         status: error.response.status,
         data: error.response.data

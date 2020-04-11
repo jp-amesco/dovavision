@@ -9,7 +9,6 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 class Routes extends Component {
 
     render () {
-        console.log(this.props)
         return <BrowserRouter>
             <Switch>
                 <Route path="/" exact={true}>

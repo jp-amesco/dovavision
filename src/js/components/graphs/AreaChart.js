@@ -1,5 +1,4 @@
 import React, { Component } from 'react' 
-import formatDate from '../../helpers/formatDate';
 import ReactApexChart from 'react-apexcharts';
 
 class AreaChart extends Component {
@@ -7,27 +6,6 @@ class AreaChart extends Component {
         super(props);
         this.makeOptions = this.makeOptions.bind(this);
         this.makeSeries = this.makeSeries.bind(this);
-    }
-
-    // componentDidMount() {
-    //     this.setState({
-    //         series: {
-    //             name: "STOCK ABC",
-    //             data: []
-    //         }
-    //     })
-    // }
-
-    formatData() {
-        let priceDaily = {
-            label: [],
-            data: []
-        };
-        for (const date in this.props.timeSeries) {
-            priceDaily.label.push(formatDate(new Date(date), true));
-            priceDaily.data.push(parseFloat(this.props.timeSeries[date]['4. close']).toFixed(2));
-        }
-        return priceDaily;
     }
 
     makeOptions() {
@@ -62,7 +40,17 @@ class AreaChart extends Component {
                     color: '#fff'
                 }
             },
-            labels: this.formatData().label.reverse(),
+            labels: this.props.data.label.reverse(),
+            fill: {
+                type: 'gradient',
+                colors: [this.props.color],
+                gradient: {
+                    shadeIntensity: 0.1,
+                    opacityFrom: 1,
+                    opacityTo: 0.6,
+                    stops: [0, 90, 100]
+                }
+            },
             xaxis: {
                 type: 'category',
                 labels: {
@@ -89,24 +77,9 @@ class AreaChart extends Component {
     makeSeries() {
         return [{
             name: this.props.stockName,
-            data: this.formatData().data.reverse()
+            data: this.props.data.timeSeries.reverse()
         }]
     }
-    //     return {
-    //         theme: "light2",
-    //         zoomEnabled: true,
-    //         exportEnabled: true,
-    //         axisY: {
-    //             includeZero: false,
-    //             valueFormatString: "##.##"
-    //         },
-    //         height: 275,
-    //         data: [{
-    //             type: "area",
-    //             yValueFormatString: "##.##",
-    //             dataPoints: this.formatData()
-    //         }]
-    //     }
 
     render () {
         return <ReactApexChart options={this.makeOptions()} series={this.makeSeries()} type="area" height={'100%'}/>

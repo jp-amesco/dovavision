@@ -49,6 +49,7 @@ class Login extends Component {
           res.data.access_token, 
           res.data.refresh_token
         )
+        localStorage.setItem('accessToken', res.data.access_token);
         this.props.history.push('/home');
       }
     })
