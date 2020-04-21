@@ -86,7 +86,6 @@ class StockName extends Component {
     }
 
     async sendRequest(stockName, interval) {
-        console.log(stockName, interval)
         const timeSeries = await requestStock('TIME_SERIES_INTRADAY', stockName, interval);
         return this.props.toggleStockInfo(stockName, timeSeries, interval);
     }
@@ -94,7 +93,7 @@ class StockName extends Component {
     render() {
         return <div className='panel panel-stock-name'> 
             <div className='row company-name'>
-                <h1 class=''>Magazine Luiza</h1>
+                <h1 className=''>Magazine Luiza</h1>
             </div>
             <div className='row'>
                 <div className='chart-options'>

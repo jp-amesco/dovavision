@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import AreaChart from '../graphs/AreaChart';
 import formatDate from '../../helpers/formatDate';
 
-class GraphPanel extends Component {
-    constructor(props) {
-        super(props);
-    }
+class GraphPanelStock extends Component {
 
     makeChart() {
         return <AreaChart 
@@ -54,4 +51,4 @@ class GraphPanel extends Component {
     }
 }
 
-export default connect(state => ({ stockName: state.stock.activeStock, timeSeries: state.stock.timeSeries }))(GraphPanel);
+export default connect(state => ({ stockName: state.stock.activeStock, timeSeries: state.stock.timeSeries }))(GraphPanelStock);

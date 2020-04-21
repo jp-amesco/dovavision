@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import Navbar from '../elements/navbar.js';
-import GraphDollarPanel from '../components/home/GraphDollarPane';
+import GraphCurrencyPanel from '../components/home/GraphCurrencyPane';
 import GraphStockPanel from '../components/home/GraphStockPanel';
-import StockList from '../components/home/StockList';
+import CurrencyList from '../components/home/CurrencyList';
 import StockName from '../components/home/StockName';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     let navbar = <Navbar/>;
-    let stockList = <StockList />;
     
     return (
       <div className='home-container-grid'>
@@ -41,13 +37,13 @@ class Home extends Component {
             </div>
           </div>
           <div className='row row-3'>
-            {stockList}
-            <div className='col'>
+            <div className='col pd-top'>
               <div className='panel panel-teste-2'></div>
             </div>
-            <div className="col">
+            <CurrencyList />
+            <div className="col pd-top">
               <div className="panel">
-                <GraphDollarPanel />
+                <GraphCurrencyPanel />
               </div>
             </div>
           </div>

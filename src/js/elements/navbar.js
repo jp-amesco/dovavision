@@ -22,9 +22,9 @@ class Navbar extends Component {
             : <GoGrabber size={40} className='navbar--icon' /> 
 
         return <div className={`navbar navbar-${this.state.opened ? 'opened': 'closed'}`}>
-            <a onClick={this.openCloseNav}>
+            <button onClick={this.openCloseNav}>
                 {icon}
-            </a>
+            </button>
         </div>
     }
 

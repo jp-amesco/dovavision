@@ -1,10 +1,9 @@
-import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import AreaChart from '../graphs/AreaChart';
 import formatDate from '../../helpers/formatDate';
-import getDollar from '../../helpers/requestDollar'
+import Currency from '../../helpers/Currency';
 
-class GraphPanel extends Component {
+class GraphPanelCurrency extends Component {
     constructor(props) {
         super(props);
 
@@ -19,7 +18,7 @@ class GraphPanel extends Component {
 
     makeChart() {
         return <AreaChart 
-            stockName={this.props.stockName} 
+            stockName={'dol'} 
             data={this.state.priceDaily}
             color='#0080e0'
         />
@@ -29,12 +28,13 @@ class GraphPanel extends Component {
     async formatData() {
         let endDate = new Date();
         let startDate = new Date();
+        let currency = new Currency();
         startDate.setDate(endDate.getDate() - 30);
 
         endDate = endDate.toISOString().split('T')[0].replace(/-/g, '');
         startDate = startDate.toISOString().split('T')[0].replace(/-/g, '');
 
-        let dollarPrices = await getDollar(startDate, endDate)
+        let dollarPrices = await currency.getCurrency(startDate, endDate)
         let priceDaily = {
             label: [],
             timeSeries: []
@@ -45,14 +45,11 @@ class GraphPanel extends Component {
             priceDaily.timeSeries.push(parseFloat(dollarPrices[i].bid).toFixed(2));
         } 
 
-        priceDaily.label = priceDaily.label.reverse();
-        priceDaily.timeSeries = priceDaily.timeSeries.reverse();
-
         this.setState({
             priceDaily: priceDaily
         });
     }
-
+  
     render() {
         return <div className='col panel-graph'>
             {
@@ -64,6 +61,8 @@ class GraphPanel extends Component {
     }
 }
 
-export default connect(
-    state => ({ stockName: state.stock.activeStock, timeSeries: state.stock.timeSeries })
-)(GraphPanel);
+// export default connect(
+//     state => ({ stockName: state.stock.activeStock, timeSeries: state.stock.timeSeries })
+// )(GraphPanelDolla);
+
+export default GraphPanelCurrency;
