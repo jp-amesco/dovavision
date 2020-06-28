@@ -27,14 +27,14 @@ class AreaChart extends Component {
             },
 
             title: {
-                text: 'Fundamental Analysis of Stocks',
+                text: this.props.title,
                 align: 'left',
                 style: {
                     color: '#fff'
                 }
             },
             subtitle: {
-                text: 'Price Movements',
+                text: this.props.subtitle,
                 align: 'left',
                 style: {
                     color: '#fff'

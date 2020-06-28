@@ -9,7 +9,7 @@ class Table extends Component {
             if (i === 1) {
                 width = 20;
             }
-            let th = <th className={`header w-${width}`}>{this.props.headers[i]}</th>
+            let th = <th className={`header w-${width}`} key={i.toString()}>{this.props.headers[i]}</th>
             headers.push(th);
         }
         return headers;
@@ -18,7 +18,7 @@ class Table extends Component {
     makeLine() {
         let content = []
         for (let i = 0; i < this.props.content.length; i++) {
-            const line = <tr className='line'>{this.makeContent(this.props.content[i])}</tr>     
+            const line = <tr className='line' key={i.toString()}>{this.makeContent(this.props.content[i])}</tr>     
             content.push(line);
         }
         return content;
@@ -31,7 +31,7 @@ class Table extends Component {
             if (i === 1) {
                 width = 20;
             }
-            const td = <td className={`w-${width}`}>{content[i]}</td>;
+            const td = <td className={`w-${width}`} key={i.toString()}>{content[i]}</td>;
             line.push(td);
         }
         return line;

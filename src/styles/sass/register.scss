@@ -2,18 +2,14 @@
 	display: grid;
 	height: 100vh;
 	align-content: center;
-	background-image: url('../../images/new-york-1.png');
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-attachment: fixed;
-	background-size: cover; 
+	z-index: 100;
 
 	.grid-container {
 		display: grid;
 		grid-template-columns: 350px;
 		margin: auto auto;
 		text-align: center;
-		background-color: rgba($color: #000, $alpha: 0.4);
+		background-color: rgba($color: #000, $alpha: 0.7);
 	}
 
 	.item {
@@ -31,4 +27,12 @@
 	.react-datepicker-wrapper {
 		width: 100%;
 	}
+}
+
+.with-image {
+	background-image: url('../../images/new-york-1.png');
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment: fixed;
+	background-size: cover; 
 }

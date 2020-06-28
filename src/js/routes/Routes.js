@@ -16,7 +16,7 @@ class Routes extends Component {
                 </Route>
                 <Route path="/login" exact={true} component={Login} />
                 <Route path="/register" exact={true} component={Register} />
-                <PrivateRoutes path="/home" exact={true} component={Home} isAuthenticated={this.props.isAuthenticated}/>
+                <PrivateRoutes path="/home" exact={true} component={Home} isAuthenticated={this.props.isAuthenticated} />
             </Switch>
         </BrowserRouter>
     }

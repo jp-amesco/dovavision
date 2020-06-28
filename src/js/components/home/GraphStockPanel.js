@@ -10,6 +10,8 @@ class GraphPanelStock extends Component {
             stockName={this.props.stockName} 
             data={this.formatData()}
             color='#0080e0'
+            title='Gráfico do preço das ações'
+            subtitle='Movimento dos preços'
         />
     }
 
@@ -26,24 +28,6 @@ class GraphPanelStock extends Component {
         return priceDaily;
     }
 
-    // formatData() {
-        // for (const date in this.timeSeries) {
-        //     let cordenates = {};
-        //     let prices = [];
-        //     for (const key in this.timeSeries[date]) {
-        //         let volume = Object.keys(this.timeSeries[date]).pop()
-        //         if (volume !== key) {
-        //             prices.push(parseFloat(this.timeSeries[date][key]).toFixed(2))
-        //         }
-        //     }
-        //     cordenates = {
-        //         x: new Date(date),
-        //         y: prices
-        //     }
-        //     data.push(cordenates);
-        // }
-    // }
-
     render() {
         return <div className='col panel-graph'>
             {this.makeChart()}
@@ -51,4 +35,4 @@ class GraphPanelStock extends Component {
     }
 }
 
-export default connect(state => ({ stockName: state.stock.activeStock, timeSeries: state.stock.timeSeries }))(GraphPanelStock);
+export default connect(state => ({ stockName: state.stock.stock.api_name, timeSeries: state.stock.timeSeries }))(GraphPanelStock);

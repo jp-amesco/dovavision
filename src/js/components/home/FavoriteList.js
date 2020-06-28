@@ -1,8 +1,10 @@
-import React, {Component} from 'react'
-import Currency from '../../helpers/Currency';
+import axios from 'axios';
 import Table from '../Table.js';
+import React, {Component} from 'react'
+import { connect } from 'react-redux';
+import Currency from '../../helpers/Currency';
 
-class CurrencyList extends Component {
+class FavoriteList extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -32,31 +34,42 @@ class CurrencyList extends Component {
         }
     }
 
-    async getData() {
-        let currency = new Currency();
-        let data = await currency.getAllCurrency();
+    getData() {
         let content = [];
-        for (const key in data) {
-            let currency = [
-                data[key].name,
-                data[key].code,
-                'R$ ' + parseFloat(data[key].bid).toFixed(2)
-            ];
-            content.push(currency);
+        const stocks = this.props.user.stock_set ?? [];
+        for (let i = 0 ; i < stocks.length; i++) {
+            content.push([
+                stocks[i].company.name,
+                stocks[i].name
+            ]);
         }
+        return content;
+    }
 
-        this.setState({
-            content: content
+    makeRequest(method, url) {
+        const axiosInstance = axios.create({
+            baseURL: process.env.REACT_APP_API_URL,
+            headers: { Authorization: 'Bearer ' + this.props.accessToken }
         })
+
+        return axiosInstance({
+            method: method,
+            url: url
+        });
     }
 
     render() {
         return <div className='col pd-top'>
             <div className='panel panel-table' style={{height: this.state.height}}>
-                <Table headers={['Nome', 'Código', 'Preço']} content={this.state.content}/>
+                <Table headers={['Nome', 'Código']} content={this.getData()}/>
             </div>
         </div>
     }
 }
 
-export default CurrencyList;
+const mapStateToProps = state => ({
+    user: state.user.user,
+    accessToken: state.user.accessToken
+});
+
+export default connect(mapStateToProps)(FavoriteList);

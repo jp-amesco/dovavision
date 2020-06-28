@@ -67,22 +67,23 @@
     border: 1px solid #02a32d; }
   .btn--success:hover {
     background-color: #007a21; }
+  .btn--danger {
+    background-color: #f63d3d;
+    border: 1px solid #f63d3d; }
+  .btn--danger:hover {
+    background-color: #d01e1e; }
 
 .register-container-grid {
   display: grid;
   height: 100vh;
   align-content: center;
-  background-image: url("../../images/new-york-1.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover; }
+  z-index: 100; }
   .register-container-grid .grid-container {
     display: grid;
     grid-template-columns: 350px;
     margin: auto auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: rgba(0, 0, 0, 0.7); }
   .register-container-grid .item {
     margin: 10px; }
     .register-container-grid .item:last-child {
@@ -91,6 +92,13 @@
     color: #fff; }
   .register-container-grid .react-datepicker-wrapper {
     width: 100%; }
+
+.with-image {
+  background-image: url("../../images/new-york-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; }
 
 .message {
   display: grid;
@@ -112,7 +120,11 @@
   transition: all .2s linear; }
 
 .navbar--icon {
-  color: white; }
+  color: white;
+  margin-top: 5px; }
+
+.navbar--icon:hover {
+  color: #008FFB; }
 
 .navbar-opened {
   background-color: black;
@@ -123,6 +135,30 @@
   z-index: 1; }
   .navbar-opened--icon {
     color: white; }
+
+.navbar .btn-black {
+  background-color: black;
+  border-color: black; }
+
+.navbar .row {
+  display: grid;
+  text-align: left; }
+  .navbar .row-35 {
+    grid-template-columns: 35% 65%; }
+  .navbar .row .col {
+    display: grid;
+    padding: 5px 5px; }
+    .navbar .row .col-none {
+      display: none; }
+
+.navbar .text-center {
+  text-align: center; }
+
+.navbar p {
+  margin: 5px 0 0 0; }
+
+.navbar a {
+  text-decoration: none; }
 
 .home-container-grid {
   display: grid;
@@ -168,7 +204,23 @@
         display: grid;
         grid-template-columns: 50% 50%; }
     .home-container-grid .content .panel-future {
-      margin-top: 10px; }
+      margin-top: 10px;
+      display: grid; }
+    .home-container-grid .content .modal {
+      background-color: #282828; }
+    .home-container-grid .content .prevision {
+      font-family: helvetica, Arial, sans-serif;
+      margin: auto;
+      font-size: 5vh;
+      text-align: center; }
+      .home-container-grid .content .prevision--high {
+        color: #008FFB; }
+      .home-container-grid .content .prevision--low {
+        color: red; }
+    .home-container-grid .content .price-future {
+      margin: auto;
+      font-size: 7vh;
+      text-align: center; }
 
 .select {
   font-size: 2vh;
@@ -202,6 +254,13 @@
     width: 40%; }
   .table .w-20 {
     width: 20%; }
+
+.profile-container-grid {
+  display: grid;
+  grid-template-columns: 3.5% 96.5%; }
+  .profile-container-grid .content {
+    display: grid;
+    padding: 15px; }
 
 body {
   margin: 0;

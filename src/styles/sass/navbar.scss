@@ -5,11 +5,15 @@
         width: 100%;
         text-align: center;
         transition: all .2s linear;
-
     }
     
     &--icon {
         color: white;
+        margin-top: 5px;
+    }
+
+    &--icon:hover {
+        color: #008FFB;
     }
 
     &-opened {
@@ -23,5 +27,40 @@
         &--icon {
             color: white;
         }
+    }
+
+    .btn-black {
+        background-color: black;
+        border-color: black;
+    }
+
+    .row {
+        display: grid;
+        text-align: left;
+
+        &-35 {
+            grid-template-columns: 35% 65%;
+        }
+        
+        .col {
+            display: grid;
+            padding: 5px 5px;
+            
+            &-none {
+                display: none;
+            }
+        }
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    p {
+        margin: 5px 0 0 0;
+    }
+
+    a {
+        text-decoration: none;
     }
 }

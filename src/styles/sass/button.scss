@@ -28,4 +28,13 @@
   &--success:hover {
     background-color: #007a21; 
   }
+
+  &--danger {
+    background-color: #f63d3d;
+    border: 1px solid #f63d3d; 
+  }
+  
+  &--danger:hover {
+    background-color: #d01e1e; 
+  }
 }

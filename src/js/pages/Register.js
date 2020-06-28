@@ -97,13 +97,15 @@ class Register extends Component {
               res.data.access_token,
               res.data.refresh_token
             )
+            localStorage.setItem('accessToken', res.data.access_token);
             this.props.history.push('/home');
           }
         })
       }).catch(error => {
+        console.log(error.response)
         this.setState({
           errorRegister: true,
-          errorMessage: error.response.data['email'][0]
+          errorMessage: 'Dados inválido, tente novamente'
         });
       })
   }
@@ -130,7 +132,7 @@ class Register extends Component {
     const buttonBack = <Link className='item btn btn--primary' to="/login">Voltar</Link>
 
     return (
-      <div className="register-container-grid">
+      <div className="register-container-grid with-image">
         {errorMessage}
         <div className='panel grid-container'>
           {title}

@@ -1,17 +1,30 @@
 const INITIAL_STATE = {
-    activeStock: 'MGLU3.SA',
+    stock: {},
     timeSeries: {},
+    isFavourite: false,
     interval: '60min',
-    stockPrice: 0
+    stockPrice: 0,
+    futurePrice: 0,
+    move: ''
 }
 
 export default function stock(state = INITIAL_STATE, action) {
     if (action.type === 'TOGGLE_STOCK_INFO') {
         return {
-            activeStock: action.activeStock,
+            ...state,
+            stock: action.stock,
             timeSeries: action.timeSeries,
             interval: action.interval,
-            stockPrice: action.stockPrice
+            stockPrice: action.stockPrice,
+            futurePrice: action.futurePrice,
+            move: action.move
+        }
+    }
+
+    if (action.type === 'SET_FAVOURITE') {
+        return {
+            ...state,
+            isFavourite: action.isFavourite
         }
     }
 

@@ -11,8 +11,12 @@ function getStock(func, symbol, interval) {
             outputsize: 'compact'
         }    
     }).then(res => {
+        if (res.data['Error Message'] || res.data['Note']) {
+            console.log('Erro na Api')
+        }
         return res.data['Time Series (' + interval + ')']
     }).catch(error => {
+        console.log('Erro Na API')
         return error.error
     })
 }

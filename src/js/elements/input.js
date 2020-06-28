@@ -15,6 +15,7 @@ class Input extends Component {
     	id={this.props.id} 
     	className={this.props.className} 
 		placeholder={this.props.placeholder}
+		defaultValue={this.props.value}
     />; 
 	response.push(input);
 

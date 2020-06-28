@@ -75,16 +75,33 @@
 
             &-future {
                 margin-top: 10px;
+                display: grid;
+            }
+        }
+
+        .modal {
+	        background-color: rgb(40, 40, 40);
+        }
+
+        .prevision {
+            font-family: helvetica, Arial, sans-serif;
+            margin: auto;
+            font-size: 5vh;
+            text-align: center;
+
+            &--high {
+                color: #008FFB
             }
 
-            &-teste-1 {
+            &--low {
+                color: red;
             }
+        }
 
-            &-teste-2 {
-            }
-
-            &-teste-3 {
-            }
+        .price-future {
+            margin: auto;
+            font-size: 7vh;
+            text-align: center;
         }
     }
 }

@@ -51,7 +51,13 @@ class Login extends Component {
         )
         localStorage.setItem('accessToken', res.data.access_token);
         this.props.history.push('/home');
+      } else {
+        this.setState({
+          errorLogin: true
+        }) 
       }
+    }).catch(error => {
+
     })
   }
 

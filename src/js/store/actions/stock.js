@@ -1,8 +1,22 @@
-export function toggleStockInfo(activeStock, timeSeries, interval) {
+function toggleStockInfo(stock, timeSeries, interval, move, futurePrice) {
     return {
         type: 'TOGGLE_STOCK_INFO',
-        activeStock: activeStock,
+        stock: stock,
         timeSeries: timeSeries,
-        interval: interval
+        interval: interval,
+        futurePrice: futurePrice,
+        move: move
     };
+}
+
+function setFavourite(isFavourite) {
+    return {
+        type: 'SET_FAVOURITE',
+        isFavourite: isFavourite
+    }
+}
+
+export {
+    toggleStockInfo,
+    setFavourite
 }

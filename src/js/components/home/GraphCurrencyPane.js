@@ -21,6 +21,8 @@ class GraphPanelCurrency extends Component {
             stockName={'dol'} 
             data={this.state.priceDaily}
             color='#0080e0'
+            title='Gráfico do preço do dólar'
+            subtitle='Movimento dos preços'
         />
     }
 
