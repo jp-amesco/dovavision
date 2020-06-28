@@ -1,0 +1,107 @@
+.home-container-grid {
+    display:  grid;
+    grid-template-columns: 3.5% 96.5%;
+
+    .content {
+        display: grid;
+        grid-template-rows: 50vh 50vh;
+
+        .row {
+            display: grid;
+
+            &-65 {
+                grid-template-columns: 65% 35%;
+            }
+
+            &-50 {
+                grid-template-columns: 50% 50%;
+            }
+
+            &-3 {
+                grid-template-columns: 25% 25% 50%;
+            }
+            
+            .col {
+                display: grid;
+                padding: 10px 15px;
+
+                &-2 {
+                    grid-template-rows: 50% 50%;
+                }
+
+                &-pd-r {
+                    padding: 0 15px 0 0;
+                }
+
+                &-pd-l {
+                    padding: 0 0 0 15px;
+                }
+            }
+        }
+
+        .panel {
+            &-graph {
+                height: 400px;
+            }
+            
+            @media screen and (max-width: 1400px) {
+                &-graph {
+                    height: 275px;
+                }
+            }
+            
+            &-stock-name {
+                margin-bottom: 10px;
+                display: grid;
+                grid-template-rows: 60% 20% 20%;
+                padding: 15px;
+                
+                .company-name {
+                    text-align: center;
+                    font-size: 2.5vh;    
+                    align-self: center;
+                    color: #fff;   
+                }
+
+                .row {
+                    display: grid;
+                }
+
+                .chart-options {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                }
+            }
+
+            &-future {
+                margin-top: 10px;
+                display: grid;
+            }
+        }
+
+        .modal {
+	        background-color: rgb(40, 40, 40);
+        }
+
+        .prevision {
+            font-family: helvetica, Arial, sans-serif;
+            margin: auto;
+            font-size: 5vh;
+            text-align: center;
+
+            &--high {
+                color: #008FFB
+            }
+
+            &--low {
+                color: red;
+            }
+        }
+
+        .price-future {
+            margin: auto;
+            font-size: 7vh;
+            text-align: center;
+        }
+    }
+}

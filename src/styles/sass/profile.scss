@@ -1,0 +1,9 @@
+.profile-container-grid {
+    display:  grid;
+    grid-template-columns: 3.5% 96.5%;
+
+    .content {
+        display: grid;
+        padding: 15px;
+    }
+}

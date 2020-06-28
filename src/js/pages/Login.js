@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
-import Button from '../elements/button.js';
-import Input from '../elements/input.js';
 import $ from 'jquery'; 
-import { Link } from 'react-router-dom';
-import Authentication from '../helpers/Authentication';
+import { connect } from 'react-redux';
+import signIn from '../helpers/signIn';
+import React, {Component} from 'react';
+import Input from '../elements/input.js';
+import Button from '../elements/button.js';
 import Message from '../elements/message.js';
-require('dotenv').config()
+import { Link } from 'react-router-dom';
+import * as AuthenticationActions from '../store/actions/authenticated';
 
+// require('dotenv').config()
 
 class Login extends Component {
   constructor(props) {
@@ -17,7 +19,7 @@ class Login extends Component {
       errorLogin: false
     };
     this.errorMessage = this.errorMessage.bind(this);
-    this.signIn = this.signIn.bind(this);
+    this.login = this.login.bind(this);
   }
 
   componentDidMount() {
@@ -37,29 +39,26 @@ class Login extends Component {
   /**
    *  efetua o login
    */
-  signIn() {
-    const auth = new Authentication();
+  login() {
     const email = $('#email').val();
     const password = $('#password').val();
-
-    const response = auth.requestToken(email, password);
-    response.then(value => {
-      let errorLogin = false;
-      if (value.data.error !== undefined) {
-        errorLogin = true; 
+    const response = signIn(email, password);
+    response.then(res => {
+      if (res.status === 200) {
+        this.props.authenticated(
+          res.data.access_token, 
+          res.data.refresh_token
+        )
+        localStorage.setItem('accessToken', res.data.access_token);
+        this.props.history.push('/home');
+      } else {
+        this.setState({
+          errorLogin: true
+        }) 
       }
+    }).catch(error => {
 
-      this.props.history.replace(
-        '/home',
-        {
-          email: this.state.email,
-          password: this.state.password,
-          token: value.data.access_token,
-          refreshToken: value.data.refresh_token,
-          errorLogin: errorLogin 
-        }
-      );
-    });
+    })
   }
 
   errorMessage() {
@@ -78,10 +77,8 @@ class Login extends Component {
     let label = <h2 className='title'>Login</h2>
   	let inputEmail = <div className="item"><Input uniqueKey='email' type='text' name='email' id='email' className={inputClass} placeholder='Email...' /></div>;
     let inputPassword = <div className="item" ><Input uniqueKey='password' type='password' name='password' id='password' className={inputClass} placeholder='Senha...'/></div>;
-  	let buttons = <div className="item subgrid">
-      <Button className='subgrid--item btn btn--success' text='Entrar' onClick={this.signIn}/>
-      <Link className='subgrid--item btn btn--primary' to="/register">Cadastrar</Link>
-    </div>
+    let login = <div className='item'><Button className='btn btn--success' text='Entrar' onClick={this.login} /></div>;
+    let cadastrar = <div className='item'><Link className='btn btn--primary' to="/register">Cadastrar</Link></div>;
 
     return (
       <div className='login-container-grid'>
@@ -90,11 +87,21 @@ class Login extends Component {
           {label}
           {inputEmail}
           {inputPassword}
-          {buttons}
+          {login}
+          {cadastrar}
         </div>
       </div>
     );
   }
 }
 
-export default Login;
+const mapStateToProps = state => ({
+  isAuthenticated: state.user.isAuthenticated
+});
+
+const mapDispatchToProps = dispatch => ({
+  authenticated: (accessToken, refreshToken) => dispatch(
+    AuthenticationActions.authenticated(accessToken, refreshToken)
+  ),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
