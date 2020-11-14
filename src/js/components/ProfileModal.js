@@ -15,7 +15,7 @@ class ProfileModal extends Component {
         this.state = {
             name: '',
             email: '',
-            birth: new Date(),
+            birth: new Date(this.props.user.date_of_birth),
             errorMessage: '',
             errorRegister: '',
             url: process.env.REACT_APP_API_URL
@@ -39,7 +39,7 @@ class ProfileModal extends Component {
         this.setState({
             name: $('#name').val(),
             email: $('#email').val(),
-            birth: this.state.birt,
+            birth: this.state.birth,
             errorMessage: '',
             errorRegister: false,
         }, () => this.update())
@@ -52,7 +52,6 @@ class ProfileModal extends Component {
             email: this.state.email,
             password: this.state.password
         }
-
         const axiosInstance = axios.create({
             baseURL: this.state.url,
             headers: { Authorization: 'Bearer ' + this.props.accessToken }

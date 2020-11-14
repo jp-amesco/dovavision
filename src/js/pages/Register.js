@@ -62,7 +62,6 @@ class Register extends Component {
       password: $('#password').val(),
       confirmPassword: $('#passwordConfirm').val(),
       email: $('#email').val(),
-      // birth: this.state.birt
       errorMessage: '',
       errorRegister: false,
     }, () => this.register())

@@ -38,6 +38,12 @@ class Navbar extends Component {
         this.makeRequest('POST', 'user/add-favourite-stock', data)
             .then(res => {
                 this.props.setFavourite(true);
+                this.makeRequest('GET', 'user/current')
+                    .then(response => {
+                        this.props.toggleUser(response.data)
+                    }).catch(err => {
+                        console.log(err)
+                    })
             }).catch(error => {
                 console.log(error)
             });
@@ -51,6 +57,12 @@ class Navbar extends Component {
         this.makeRequest('POST', 'user/remove-favourite-stock', data)
             .then(res => {
                 this.props.setFavourite(false);
+                this.makeRequest('GET', 'user/current')
+                    .then(response => {
+                        this.props.toggleUser(response.data)
+                    }).catch(err => {
+                        console.log(err)
+                    })
             }).catch(error => {
                 console.log(error)
             });

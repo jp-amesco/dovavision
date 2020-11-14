@@ -14,6 +14,15 @@
   .panel-table::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 10px; }
+  .panel-grid {
+    display: grid; }
+    .panel-grid .end {
+      display: grid;
+      align-items: end; }
+    .panel-grid .empty {
+      text-align: center;
+      margin: 15px;
+      color: white; }
 
 .login-container-grid {
   display: grid;

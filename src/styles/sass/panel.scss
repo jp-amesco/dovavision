@@ -22,5 +22,20 @@
 		background: #ccc;
 		border-radius: 10px;
 	}
+
+	&-grid {
+		display: grid;
+
+		.end {
+			display: grid;
+			align-items: end;
+		}
+		
+		.empty {
+			text-align: center;
+			margin: 15px;
+			color: white;
+		}
+	}
 }	
 

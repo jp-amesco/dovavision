@@ -3,6 +3,7 @@ import Table from '../Table.js';
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import Currency from '../../helpers/Currency';
+import { AiOutlineStar } from "react-icons/ai";
 
 class FavoriteList extends Component {
     constructor(props) {
@@ -59,9 +60,15 @@ class FavoriteList extends Component {
     }
 
     render() {
+        const content = this.getData();
         return <div className='col pd-top'>
-            <div className='panel panel-table' style={{height: this.state.height}}>
-                <Table headers={['Nome', 'Código']} content={this.getData()}/>
+            <div className={`panel ${content.length === 0 ? 'panel-grid' : 'panel-table'}`} style={{height: this.state.height}}>
+                {
+                    content.length === 0 
+                    ? [<div className='end'><h3 className='empty'>Sua lista de favoritos está vazia</h3></div>, 
+                      <div className='start'><h3 className='empty'> clique na <AiOutlineStar size={25} className='' /> para adicionar uma empresa</h3></div>]
+                    : <Table headers={['Nome', 'Código']} content={content}/>
+                }
             </div>
         </div>
     }
